@@ -99,7 +99,7 @@ html {
 
 .navbarButton {
   width: 34.8rem;
-  height: 6rem;
+  padding: 1rem;
   border: none;
   background: linear-gradient(92.86deg, #c9e331 -6.54%, #54a31f 96.73%);
   border-radius: 6.5rem;

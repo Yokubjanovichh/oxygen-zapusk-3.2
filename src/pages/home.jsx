@@ -73,7 +73,7 @@ export default function Home() {
             onClick={() => setIsModalOpen(true)}
             className={styles.navbarButton}
           >
-            NARXLARNI BILISH
+            Taqdimotda qatnashish
           </button>
           <p className={styles.navbarDesc}>
             22-avgust, soat 20:00 da Telegram kanalda jonli efir, qolib ketmang
