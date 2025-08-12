@@ -70,7 +70,16 @@ export default function Home() {
             bO‘LIB To‘LASH EVAZIGa XONADONLIk Bo‘LING
           </h2>
           <button
-            onClick={() => setIsModalOpen(true)}
+            onClick={() => {
+              setIsModalOpen(true);
+
+              if (typeof fbq !== "undefined") {
+                fbq("trackCustom", "OpenModalButtonClicked", {
+                  buttonText: "Taqdimotda qatnashish",
+                  page: window.location.pathname,
+                });
+              }
+            }}
             className={styles.navbarButton}
           >
             Taqdimotda qatnashish
