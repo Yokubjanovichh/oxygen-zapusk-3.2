@@ -72,13 +72,6 @@ export default function Home() {
           <button
             onClick={() => {
               setIsModalOpen(true);
-
-              if (typeof fbq !== "undefined") {
-                fbq("trackCustom", "OpenModalButtonClicked", {
-                  buttonText: "Taqdimotda qatnashish",
-                  page: window.location.pathname,
-                });
-              }
             }}
             className={styles.navbarButton}
           >
