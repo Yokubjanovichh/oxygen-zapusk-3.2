@@ -11,7 +11,7 @@ export default function LastPage() {
   const [pageLoaded, setPageLoaded] = useState(false);
 
   useEffect(() => {
-    const imageList = [lastPageText, dateOfConversation];
+    const imageList = [lastPageText, dateOfConversation, tgChannel];
 
     let loadedCount = 0;
     imageList.forEach((src) => {
