@@ -115,7 +115,7 @@ html {
 
   transition: background-position 0.5s ease-in-out;
 
-  animation: gradientWipe 3s infinite ease;
+  animation: gradientWipe 1.5s infinite ease, pulse 1.5s infinite ease;
   background-size: 150% auto;
   background-position: left center;
 }
@@ -126,6 +126,18 @@ html {
   }
   100% {
     background-position: -200% center;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
