@@ -113,14 +113,16 @@ export default function Home() {
             <p className={styles.information}>ma'lumotlaringizni qoldiring!</p>
             <div className={styles.form}>
               <div className={styles.inputs}>
-                <input
-                  type="text"
-                  placeholder="Ismingiz"
-                  name="name"
-                  value={name || ""}
-                  onChange={(e) => setName(e.target.value)}
-                  required
-                />
+                <label>
+                  <span className={styles.ism}>Ismingiz</span>
+                  <input
+                    type="text"
+                    name="name"
+                    value={name || ""}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                  />
+                </label>
                 <PatternFormat
                   format="+998 ## ### ## ##"
                   allowEmptyFormatting

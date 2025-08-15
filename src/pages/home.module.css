@@ -141,6 +141,15 @@ html {
   }
 }
 
+.ism {
+  font-family: "TT Firs Neue";
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 1.6rem;
+  letter-spacing: 0%;
+  color: #000;
+}
+
 .navbarButton:active {
   transform: scale(0.97);
 }
