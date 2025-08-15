@@ -48,7 +48,7 @@ export default function LastPage() {
 
         <div className={styles.lastButtons}>
           <button
-            className={styles.tgChannel}
+            className={`${styles.tgChannel} ${styles.neon_pulse}`}
             onClick={() => {
               if (typeof fbq !== "undefined") {
                 fbq("trackCustom", "JoinTelegramChannelClicked", {
@@ -59,7 +59,9 @@ export default function LastPage() {
               window.location.href = "https://t.me/+elILXAMRNTAxOGQy";
             }}
           >
-            <img src={tgChannel} alt="tgChannel" />
+            <span>
+              <img src={tgChannel} alt="tgChannel" />
+            </span>
           </button>
 
           <div className={styles.descMain}>

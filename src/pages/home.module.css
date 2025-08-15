@@ -101,7 +101,7 @@ html {
   width: 34.8rem;
   padding: 1rem;
   border: none;
-  background: linear-gradient(92.86deg, #c9e331 -6.54%, #54a31f 96.73%);
+  background: none;
   border-radius: 6.5rem;
   font-family: "TT Firs Neue";
   font-weight: 500;
@@ -113,28 +113,51 @@ html {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 1);
 
-  transition: background-position 0.5s ease-in-out;
-
-  animation: gradientWipe 1.5s infinite ease, pulse 1.5s infinite ease;
-  background-size: 150% auto;
-  background-position: left center;
+  border: none;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease;
+  z-index: 1;
+  animation: pulseOut2 2s ease-out infinite;
 }
 
-@keyframes gradientWipe {
+.neon_pulse {
+  background: linear-gradient(92.86deg, #c9e331 -6.54%, #54a31f 96.73%);
+  overflow: visible;
+}
+
+.neon_pulse::before,
+.neon_pulse::after {
+  content: "";
+  position: absolute;
+  inset: -0.4rem;
+  border: 0.2rem solid green;
+  border-radius: inherit;
+  animation: pulseOut 2s ease-out infinite;
+  opacity: 0;
+}
+
+.neon_pulse::after {
+  animation-delay: 1s;
+}
+
+@keyframes pulseOut {
   0% {
-    background-position: 0% center;
+    transform: scale(1);
+    opacity: 1;
   }
   100% {
-    background-position: -200% center;
+    transform: scale(1.25);
+    opacity: 0;
   }
 }
 
-@keyframes pulse {
+@keyframes pulseOut2 {
   0% {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.06);
+    transform: scale(1.05);
   }
   100% {
     transform: scale(1);
@@ -164,7 +187,7 @@ html {
   letter-spacing: 0%;
   text-align: center;
 
-  margin-top: 0.8rem;
+  margin-top: 2.8rem;
 }
 
 .footer {

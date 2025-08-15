@@ -73,9 +73,9 @@ export default function Home() {
             onClick={() => {
               setIsModalOpen(true);
             }}
-            className={styles.navbarButton}
+            className={`${styles.navbarButton} ${styles.neon_pulse}`}
           >
-            Taqdimotda qatnashish
+            <span>Taqdimotda qatnashish</span>
           </button>
           <p className={styles.navbarDesc}>
             22-avgust, soat 20:00 da Telegram kanalda jonli efir, qolib ketmang
